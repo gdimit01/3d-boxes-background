@@ -68,19 +68,18 @@ body {
   height: 125px;
   width: 125px;
   transition: 0.4s ease;
-  animation: spin 1s ease-in-out infinite;
 }
 
 .box:nth-child(1) {
-  animation-delay: 0s;
+  animation: spin 1s ease-in-out 0s 1;
 }
 
 .box:nth-child(2) {
-  animation-delay: 0.1s;
+  animation: spin 1s ease-in-out 1s 1;
 }
 
 .box:nth-child(3) {
-  animation-delay: 0.2s;
+  animation: spin 1s ease-in-out 2s 1;
 }
 
 .box::after {
@@ -105,3 +104,11 @@ body {
   transform: skewX(45deg);
 }
 
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
